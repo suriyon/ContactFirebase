@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -43,10 +44,12 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
 
     public class ContactViewHolder extends RecyclerView.ViewHolder {
         TextView tvContactName, tvContactMobile;
+        LinearLayout layoutContact;
         public ContactViewHolder(@NonNull View itemView) {
             super(itemView);
             tvContactName = itemView.findViewById(R.id.tv_contact_name);
             tvContactMobile = itemView.findViewById(R.id.tv_contact_mobile);
+            layoutContact = itemView.findViewById(R.id.layout_contact);
         }
     }
 }
